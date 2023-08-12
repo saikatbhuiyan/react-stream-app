@@ -1,3 +1,4 @@
+import _ from "lodash";
 import {
   CREATE_STREAM,
   FETCH_STREAM,
@@ -6,8 +7,7 @@ import {
   DELETE_STREAM,
 } from "../actions/types";
 
-import _ from "lodash";
-
+// eslint-disable-next-line
 export default (state = {}, action) => {
   switch (action.type) {
     case FETCH_STREAMS:
