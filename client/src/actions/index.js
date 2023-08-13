@@ -29,7 +29,7 @@ export const createStream = (payload) => async (dispatch, getState) => {
   const response = await streams.post("/streams", { ...payload, userId });
 
   dispatch({ type: CREATE_STREAM, payload: response.data });
-  history.push("/")
+  history.push("/");
 };
 
 export const fetchStreams = () => async (dispatch) => {
@@ -48,6 +48,7 @@ export const editStream = (id, payload) => async (dispatch) => {
   const response = await streams.put(`/streams/${id}`, payload);
 
   dispatch({ type: EDIT_STREAM, payload: response.data });
+  history.push("/");
 };
 
 export const deleteStream = (id) => async (dispatch) => {
